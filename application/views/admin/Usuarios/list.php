@@ -2,7 +2,7 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>Administrador/Usuarios/add" class="btn btn-primary btn-labeled pull-right">
+      <a href="<?php echo base_url();?>Administrador/Usuarios/add" class="btn btn-primary btn-labeled pull-right" data-toggle="modal" data-target="#myModal">
         <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Usuario
       </a>
       <h3>Usuarios
@@ -45,9 +45,9 @@
                                       <a href="<?php echo base_url();?>administrador/usuarios/view/<?php echo $usuario->idUsuario;?>"
                                          class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
                                       <a href="<?php echo base_url()?>administrador/usuarios/edit/<?php echo $usuario->idUsuario;?>"
-                                         class="btn btn-warning"> <span class="fa fa-pencil"></span> </a>
+                                         class="btn btn-warning" data-toggle="modal" data-target="#myModal"><span class="fa fa-pencil"></span> </a>
                                       <a href="<?php echo base_url()?>administrador/usuarios/delete/<?php echo $usuario->idUsuario;?>"
-                                         class="btn btn-oval btn-danger"> <span class="fa fa-trash-o"></span> </a>
+                                         class="btn btn-oval btn-danger" > <span class="fa fa-trash-o"></span> </a>
                                     </div>
                                   </td>
                               </tr>

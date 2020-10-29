@@ -21,10 +21,10 @@ class Usuarios extends CI_Controller {
 
   public function add()
 	{
-    $this->load->view('layouts/header');
-		$this->load->view('layouts/aside');
+    //$this->load->view('layouts/header');
+		//$this->load->view('layouts/aside');
 		$this->load->view('admin/usuarios/add');
-		$this->load->view('layouts/footer');
+		//$this->load->view('layouts/footer');
   }
 
   public function agregardb()
@@ -55,11 +55,10 @@ class Usuarios extends CI_Controller {
   public function edit($idusuario)
     {
       $data = array('usuario' => $this->Usuarios_model->getUsuario($idusuario),);
-
-      $this->load->view('layouts/header');
-      $this->load->view('layouts/aside');
+      //$this->load->view('layouts/header');
+      //$this->load->view('layouts/aside');
     	$this->load->view('admin/usuarios/edit',$data);
-    	$this->load->view('layouts/footer');
+    	//$this->load->view('layouts/footer');
     }
 
   public function view($idusuario)
