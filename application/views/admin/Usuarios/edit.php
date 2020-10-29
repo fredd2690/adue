@@ -20,7 +20,7 @@
                  <?php endif; ?>
 
                <div class="panel-body" >
-                           <input type="hidden" id="idusuario" name="idusuario" value="<?php echo $usuario->idusuario?>" class="form-control">
+                           <input type="hidden" id="idusuario" name="idusuario" value="<?php echo $usuario->idUsuario?>" class="form-control">
                            <div class="form-group">
                               <label for="nombre">Nombre: (*)</label>
                               <input type="text" id="nombre" name="nombre" value="<?php echo $usuario->nombres?>" class="form-control" minlegth="4" maxlength="20" required="" pattern="[a-zA-Z]+">
@@ -43,7 +43,7 @@
                            </div>
                            <div class="form-group">
                               <label for="idrol">Privilegios:</label>
-                              <select id="idrol" name="idrol" default="<?php echo $usuario->idrol?>" class="form-control m-b">
+                              <select id="idrol" name="idrol" default="<?php echo $usuario->idRol?>" class="form-control m-b">
                                  <option value="2">Usuario</option>
                                  <option value="1">Administrador</option>
                               </select>

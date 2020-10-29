@@ -42,12 +42,11 @@
 
                                   <td>
                                     <div class="btn-group">
-
-                                      <a href="<?php echo base_url();?>administrador/usuarios/view/<?php echo $usuario->idusuario;?>"
+                                      <a href="<?php echo base_url();?>administrador/usuarios/view/<?php echo $usuario->idUsuario;?>"
                                          class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
-                                      <a href="<?php echo base_url()?>administrador/usuarios/edit/<?php echo $usuario->idusuario;?>"
+                                      <a href="<?php echo base_url()?>administrador/usuarios/edit/<?php echo $usuario->idUsuario;?>"
                                          class="btn btn-warning"> <span class="fa fa-pencil"></span> </a>
-                                      <a href="<?php echo base_url()?>administrador/usuarios/delete/<?php echo $usuario->idusuario;?>"
+                                      <a href="<?php echo base_url()?>administrador/usuarios/delete/<?php echo $usuario->idUsuario;?>"
                                          class="btn btn-oval btn-danger"> <span class="fa fa-trash-o"></span> </a>
                                     </div>
                                   </td>

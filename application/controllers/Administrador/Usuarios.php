@@ -18,7 +18,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('admin/usuarios/list',$data);
 		$this->load->view('layouts/footer');
   }
-  
+
   public function add()
 	{
     $this->load->view('layouts/header');
@@ -26,7 +26,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('admin/usuarios/add');
 		$this->load->view('layouts/footer');
   }
-  
+
   public function agregardb()
 	{
     $nombre = $this->input->post("nombre");
@@ -70,7 +70,7 @@ class Usuarios extends CI_Controller {
       //$this->load->view('layouts/aside');
     	$this->load->view('admin/usuarios/view',$data);
     	//$this->load->view('layouts/footer');
-    }  
+    }
 
   public function updatedb()
     {
@@ -98,7 +98,7 @@ class Usuarios extends CI_Controller {
       }
 
     }
-    
+
   public function delete($idusuario)
     {
       $data['estado']='0';
@@ -108,7 +108,7 @@ class Usuarios extends CI_Controller {
       //$this->load->view('layouts/aside');
     	//$this->load->view('admin/usuarios/',$data);
       //$this->load->view('layouts/footer');
-      
+
 
       if ($this->Usuarios_model->deleteUsuario($idusuario,$data)) {
         redirect("Administrador/usuarios/index");
@@ -118,9 +118,8 @@ class Usuarios extends CI_Controller {
      }
     }
 
-    
+
 
 
 
 }
-     

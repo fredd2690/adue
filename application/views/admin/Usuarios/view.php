@@ -1,7 +1,7 @@
 <!-- START Main section-->
 <section>
    <!-- START Page content-->
-   <section class="main-content">    
+   <section class="main-content">
 
       <!-- START DATATABLE 3-->
       <div class="row">
@@ -20,7 +20,7 @@
                  <?php endif; ?>
 
                <div class="panel-body" >
-                           <input type="hidden" id="idusuario" name="idusuario" va lue="<?php echo $usuario->idusuario?>" class="form-control" readonly>
+                           <input type="hidden" id="idusuario" name="idusuario" va lue="<?php echo $usuario->idUsuario?>" class="form-control" readonly>
                            <div class="form-group">
                               <label for="nombre">Nombre:</label>
                               <input type="text" id="nombre" name="nombre" value="<?php echo $usuario->nombres?>" class="form-control" readonly>
@@ -37,14 +37,14 @@
                               <label for="username">Nombre de Usuario:</label>
                               <input type="username" id="username" name="username" value="<?php echo $usuario->username?>" class="form-control" disabled>
                            </div>
-                                                     
-                           
+
+
                     </form>
 
                     <a href="<?php echo base_url();?>Administrador/Usuarios/" class="btn btn-primary btn-labeled pull-right">
-                     <span class="btn-label"><i class="fa fa-times-circle"></i></span>Cerrar       
-                     </a>                  
-                    
+                     <span class="btn-label"><i class="fa fa-times-circle"></i></span>Cerrar
+                     </a>
+
 
                </div>
             </div>
