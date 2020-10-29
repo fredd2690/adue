@@ -46,8 +46,7 @@
                                          class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
                                       <a href="<?php echo base_url()?>administrador/usuarios/edit/<?php echo $usuario->idUsuario;?>"
                                          class="btn btn-warning" data-toggle="modal" data-target="#myModal"><span class="fa fa-pencil"></span> </a>
-                                      <a href="<?php echo base_url()?>administrador/usuarios/delete/<?php echo $usuario->idUsuario;?>"
-                                         class="btn btn-oval btn-danger" > <span class="fa fa-trash-o"></span> </a>
+                                      <button data-toggle="modal" data-target="#myModal1" class="btn btn-oval btn-danger "> <span class="fa fa-trash-o"></span> </button>
                                     </div>
                                   </td>
                               </tr>
@@ -83,22 +82,38 @@
 
  <!-- START modal-->
  <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-               <h4 id="myModalLabel" class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
 
-            <div class="panel-body" >
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
 
-            </div>
-            <div class="modal-footer">
-               <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button>--->
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- END modal-->
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+             <h4 id="myModalLabel" class="modal-title">Eliminar Registro</h4>
+          </div>
+          <div class="modal-body alert alert-danger alert-dismissable ">
+            Esta seguro de quere eliminar este registro?
+          </div>
+          <div class="modal-footer">
+             <a href="<?php echo base_url()?>administrador/usuarios/delete/<?php echo $usuario->idUsuario;?>"
+                  class="btn btn-danger btn-labeled">
+                  <span class="btn-label"> <i class="fa fa-trash-o"></i></span>Eliminar</a>
+             <button type="button" data-dismiss="modal" class="btn btn-primary">Cancelar</button>
+
+          </div>
+       </div>
+    </div>
+ </div>
+  <!-- END modal-->

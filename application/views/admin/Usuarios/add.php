@@ -2,17 +2,13 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <h3>Usuarios
-         <br>
-         <small>Nuevo</small>
-      </h3>
 
       <!-- START DATATABLE 3-->
       <div class="row">
          <div class="col-lg-12">
            <div class="panel panel-default">
-               <div class="panel-heading">Lista |
-                  <small>usuarios</small>
+               <div class="panel-heading">Nuevo |
+                  <small>usuario</small>
                </div>
 
 
@@ -54,8 +50,8 @@
                            </div>
                            <button type="submit" class="btn btn-labeled btn-success pull-left">
                              <span class="btn-label"><i class="fa fa-check-circle"></i></span>Agregar</button>
-
-                             <a href="<?php echo base_url()?>Administrador/Usuarios/" class="btn btn-danger btn-labeled pull-right">
+                      <!--       <button type="button" data-dismiss="modal" class="btn btn-primary pull-right">Cancelar</button>
+                      -->       <a href="<?php echo base_url()?>Administrador/Usuarios/" class="btn btn-danger btn-labeled pull-right">
                                 <span class="btn-label"><i class="fa fa-ban"></i></span>Cancelar
                             </a>
                      </div>
