@@ -79,8 +79,6 @@
                            <input type="checkbox" value="">
                            <span class="fa fa-check"></span>Recordarme</label>
                      </div>
-                     <!--<div class="pull-right"><a href="#" class="text-muted">Olvisdate tu contraseña?</a>
-                     </div>-->
                   </div>
                   <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
                </form>

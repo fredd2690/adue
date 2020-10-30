@@ -10,96 +10,84 @@ class Curso extends CI_Controller {
 
 	public function index()
 	{
-  //  $data = array (
-    //  'curso' => $this->Curso_model->getCurso(),
-    //);
+    $data = array (
+      'cursos' => $this->Curso_model->getCursos(),
+    );
 		$this->load->view('layouts/header');
 		$this->load->view('layouts/aside');
-		$this->load->view('admin/curso/list' );//,$data);
+		$this->load->view('admin/curso/list', $data );//,$data);
 		$this->load->view('layouts/footer');
   }
 
   public function add()
 	{
-    $this->load->view('layouts/header');
-		$this->load->view('layouts/aside');
-		$this->load->view('admin/usuarios/add');
-		$this->load->view('layouts/footer');
+    //$this->load->view('layouts/header');
+		//$this->load->view('layouts/aside');
+		$this->load->view('admin/curso/add');
+		//$this->load->view('layouts/footer');
   }
 
   public function agregardb()
 	{
-    $nombre = $this->input->post("nombre");
-    $apellido = $this->input->post("apellido");
-    $email =$this->input->post("email");
-    $username =$this->input->post("username");
-    $password =$this->input->post("password");
-    $idrol = $this->input->post("idrol");
-    //echo $nombre." ".$apellido." ".$idrol;
-    $data = array('nombres' => $nombre,
-                  'apellidos'=>$apellido,
-                  'email'=>$email,
-                  'username'=>$username,
-                  'password'=>md5($password),
-                  'idrol'=>$idrol,
+    $curso = $this->input->post("nombre");
+    $seccion = $this->input->post("seccion");
+    $tutor =$this->input->post("tutor");
+    $data = array('nombre' => $curso,
+                  'seccion'=>$seccion,
+                  'tutor'=>$tutor,
                 );
-    if ($this->Usuarios_model->agregarusuario($data)) {
-       redirect("Administrador/usuarios/index");
+    if ($this->Curso_model->agregarcurso($data)) {
+       redirect("Curso/Curso/index");
     }else {
       $this->session->set_flashdata("error","No se pudo guardar la informacion");
-      redirect(base_url()."/Administrador/usuarios/add");
+      redirect(base_url()."/Curso/Curso/add");
     }
   }
 
 
-  public function edit($idusuario)
+  public function edit($idcurso)
     {
-      $data = array('usuario' => $this->Usuarios_model->getUsuario($idusuario),);
-
-      $this->load->view('layouts/header');
-      $this->load->view('layouts/aside');
-    	$this->load->view('admin/usuarios/edit',$data);
-    	$this->load->view('layouts/footer');
-    }
-
-  public function view($idusuario)
-    {
-      $data = array('usuario' => $this->Usuarios_model->getUsuario($idusuario),);
+      $data = array('curso' => $this->Curso_model->getCurso($idcurso));
 
       //$this->load->view('layouts/header');
       //$this->load->view('layouts/aside');
-    	$this->load->view('admin/usuarios/view',$data);
+    	$this->load->view('admin/curso/edit',$data);
+    	//$this->load->view('layouts/footer');
+    }
+
+  public function view($idCurso)
+    {
+      $data = array('curso' => $this->Curso_model->getCurso($idCurso));
+
+      //$this->load->view('layouts/header');
+      //$this->load->view('layouts/aside');
+    	$this->load->view('admin/curso/view',$data);
     	//$this->load->view('layouts/footer');
     }
 
   public function updatedb()
     {
-      $idusuario = $this->input->post("idusuario");
+      $idcurso = $this->input->post("idcurso");
       $nombre = $this->input->post("nombre");
-      $apellido = $this->input->post("apellido");
-      $email =$this->input->post("email");
-      $username =$this->input->post("username");
-      $password =$this->input->post("password");
-      $idrol = $this->input->post("idrol");
+      $seccion = $this->input->post("seccion");
+      $tutor =$this->input->post("tutor");
 
-      $data = array('idusuario' => $idusuario,
-                    'nombres'=>$nombre,
-                    'apellidos'=>$apellido,
-                    'email'=>$email,
-                    'username'=>$username,
-                    'password'=>md5($password),
-                    'idrol'=>$idrol,
+
+      $data = array('idcurso' => $idcurso,
+                    'nombre'=>$nombre,
+                    'seccion'=>$seccion,
+                    'tutor'=>$tutor,
                   );
-      if ($this->Usuarios_model->update($idusuario,$data)) {
-         redirect("Administrador/usuarios/index");
+      if ($this->Curso_model->update($idcurso,$data)) {
+         redirect("Curso/Curso/index");
       }else {
         $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
-        redirect(base_url()."/administrador/usuarios/edit".$idusuario);
+        redirect(base_url()."/Curso/curso/edit".$idcurso);
       }
 
     }
 
-  public function delete($idusuario)
+  public function delete($idcurso)
     {
       $data['estado']='0';
       //$data = array('usuario' => $this->Usuarios_model->deleteUsuario($idusuario,$data));
@@ -110,11 +98,11 @@ class Curso extends CI_Controller {
       //$this->load->view('layouts/footer');
 
 
-      if ($this->Usuarios_model->deleteUsuario($idusuario,$data)) {
-        redirect("Administrador/usuarios/index");
+      if ($this->Curso_model->deleteCurso($idcurso,$data)) {
+        redirect("Curso/Curso/index");
      }else {
        $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
-       redirect(base_url()."/administrador/usuarios/");
+       redirect(base_url()."/Curso/Curso/");
      }
     }
 

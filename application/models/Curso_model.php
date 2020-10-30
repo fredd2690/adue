@@ -2,11 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Curso_model extends CI_Model {
-
+	//Esta funcion retorna todos los registros de la tabla cursos
 	public function getCursos()
 	{
-		//$this->db->select("*");
-		//$this->db->from('usuarios');
 		$this->db->where("estado","1");
 		$resultados = $this->db->get("Curso");
 			return $resultados->result();
@@ -14,26 +12,26 @@ class Curso_model extends CI_Model {
 
 	public function agregarcurso($data)
 	{
-		return $this->db->insert('usuarios',$data);
+		return $this->db->insert('curso',$data);
 	}
 
-	public function getCurso($idcurso)
+	public function getCurso($idCurso)
 	{
-		$this->db->where("idcurso",$idcurso);
+		$this->db->where("idCurso",$idCurso);
 		$resultado = $this->db->get("curso");
 		return $resultado->row();
 	}
 	//
-	public function update($idusuario,$data)
+	public function update($idcurso,$data)
 	{
-		$this->db->where('idusuario',$idusuario);
-		return $this->db->update('usuarios',$data);
+		$this->db->where('idcurso',$idcurso);
+		return $this->db->update('curso',$data);
 	}
 
-	public function deleteUsuario($idusuario,$data)
+	public function deleteCurso($idcurso,$data)
 	{
-		$this->db->where('idusuario',$idusuario);
-		return $this->db->update('usuarios',$data);
+		$this->db->where('idcurso',$idcurso);
+		return $this->db->update('curso',$data);
 	}
 
 

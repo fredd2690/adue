@@ -2,7 +2,7 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>Administrador/Usuarios/add" class="btn btn-primary btn-labeled pull-right">
+      <a href="<?php echo base_url();?>Curso/Curso/add" class="btn btn-primary btn-labeled pull-right" data-toggle="modal" data-target="#myModal">
         <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Curso
       </a>
       <h3>Cursos
@@ -25,30 +25,27 @@
                           <th>Curso</th>
                           <th>Seccion</th>
                           <th>Tutor</th>
-                          <th class="sort-numeric">Engine version</th>
-                          <th class="sort-alpha"></th>
+                          <th class="sort-alpha">acciones</th>
                         </tr>
                      </thead>
                      <tbody>
-                       <?php  if(!empty($usuarios)):?>
+                       <?php  if(!empty($cursos)):?>
                          <?php $cont = 1; ?>
-                         <?php foreach ($usuarios as $usuario): ?>
+                         <?php foreach ($cursos as $curso): ?>
                                <tr class="gradeX">
                                   <td><?php echo $cont; ?></td>
-                                  <td><?php echo $usuario->nombres; ?></td>
-                                  <td><?php echo $usuario->apellidos; ?></td>
-                                  <td><?php echo $usuario->email; ?></td>
-                                  <td><?php echo $usuario->username; ?></td>
-
+                                  <td><?php echo $curso->nombre; ?></td>
+                                  <td><?php echo $curso->seccion; ?></td>
+                                  <td><?php echo $curso->tutor; ?></td>
                                   <td>
                                     <div class="btn-group">
 
-                                      <a href="<?php echo base_url();?>curso/curso/view/<?php echo $usuario->idusuario;?>"
+                                      <a href="<?php echo base_url();?>curso/curso/view/<?php echo $curso->idCurso;?>"
                                          class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
-                                      <a href="<?php echo base_url()?>curso/curso/edit/<?php echo $usuario->idusuario;?>"
-                                         class="btn btn-warning"> <span class="fa fa-pencil"></span> </a>
-                                      <a href="<?php echo base_url()?>curso/curso/delete/<?php echo $usuario->idusuario;?>"
-                                         class="btn btn-oval btn-danger"> <span class="fa fa-trash-o"></span> </a>
+                                      <a href="<?php echo base_url();?>curso/curso/edit/<?php echo $curso->idCurso;?>"
+                                         class="btn btn-warning" data-toggle="modal" data-target="#myModal"> <span class="fa fa-pencil"></span> </a>
+                                      <button data-toggle="modal" data-target="#myModal1" class="btn btn-oval btn-danger "> <span class="fa fa-trash-o"></span> </button>
+
                                     </div>
                                   </td>
                               </tr>
@@ -58,10 +55,10 @@
                         <tfoot>
                            <tr>
                              <th>#</th>
-                             <th>Nombre</th>
-                             <th>Apellido</th>
-                             <th>E-mail</th>
-                             <th>nombre de Usuario</th>
+                             <th>Curso</th>
+                             <th>Seccion</th>
+                             <th>Tutor</th>
+                             <th class="sort-alpha">acciones</th>
                            </tr>
                         </tfoot>
                      </tbody>
@@ -82,24 +79,39 @@
 <!-- END Main wrapper-->
 
 
- <!-- START modal-->
- <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-               <h4 id="myModalLabel" class="modal-title">Modal title</h4>
-            </div>
+<!-- START modal-->
+<div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+         </div>
             <div class="modal-body">
-
-            <div class="panel-body" >
-
             </div>
-            <div class="modal-footer">
-               <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button>--->
-            </div>
+         <div class="modal-footer">
          </div>
       </div>
    </div>
-   <!-- END modal-->
+</div>
+
+<div id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+            <h4 id="myModalLabel" class="modal-title">Eliminar Registro</h4>
+         </div>
+            <div class="modal-body alert alert-danger alert-dismissable ">
+              Esta seguro de quere eliminar este registro?
+            </div>
+         <div class="modal-footer">
+
+            <a href="<?php echo base_url()?>Curso/Curso/delete/<?php echo $curso->idCurso;?>"
+                 class="btn btn-danger btn-labeled">
+                 <span class="btn-label"> <i class="fa fa-trash-o"></i></span>Eliminar</a>
+            <button type="button" data-dismiss="modal" class="btn btn-primary">Cancelar</button>
+
+         </div>
+      </div>
+   </div>
+</div>
+ <!-- END modal-->
