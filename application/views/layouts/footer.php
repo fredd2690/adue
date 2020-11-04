@@ -27,6 +27,11 @@
 <script src="<?php echo base_url();?>assets/vendor/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>
 <script src="<?php echo base_url();?>assets/vendor/datatable/extensions/ColVis/js/dataTables.colVis.min.js"></script>
 <!-- END Page Custom Script-->
+<!-- MomentJs and Datepicker-->
+<script src="<?php echo base_url();?>assets/vendor/moment/min/moment-with-langs.min.js"></script>
+<script src="<?php echo base_url();?>assets/vendor/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<!-- Tags input-->
+
 <!-- App Main-->
 <script src="<?php echo base_url();?>assets/app/js/app.js"></script>
 <!-- END Scripts-->

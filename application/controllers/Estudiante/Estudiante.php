@@ -19,13 +19,13 @@ class Estudiante extends CI_Controller {
 		$this->load->view('layouts/footer');
   }
 
-  // public function add()
-  // {
-  //     $this->load->view('layouts/header');
-  //   	$this->load->view('layouts/aside');
-  // 	$this->load->view('admin/curso/add');
-  // 	//$this->load->view('layouts/footer');
-  // }
+  public function add()
+  {
+      $this->load->view('layouts/header');
+    	$this->load->view('layouts/aside');
+      $this->load->view('admin/estudiante/add');
+      $this->load->view('layouts/footer');
+  }
   //
   // public function agregardb()
   // {

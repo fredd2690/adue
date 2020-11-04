@@ -24,6 +24,7 @@
    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/fontawesome/css/font-awesome.min.css">
    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/animo/animate+animo.css">
    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/csspinner/csspinner.min.css">
+   <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/datetimepicker/css/bootstrap-datetimepicker.min.css">
    <!-- START Page Custom CSS-->
    <!-- Data Table styles-->
    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/datatable/extensions/datatable-bootstrap/css/dataTables.bootstrap.css">

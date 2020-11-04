@@ -2,8 +2,8 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>Curso/Curso/add" class="btn btn-primary btn-labeled pull-right" data-toggle="modal" data-target="#myModal">
-        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>DEFINIR
+      <a href="<?php echo base_url();?>Estudiante/estudiante/add" class="btn btn-primary btn-labeled pull-right">
+        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Estudiante
       </a>
       <h3>Estudiantes
          <br>
@@ -14,7 +14,7 @@
       <div class="row">
          <div class="col-lg-12">
             <div class="panel panel-default">
-               <div class="panel-heading">Lista de estudiantes |
+               <div class="panel-heading">Estudiantes |
                   <small>detalles</small>
                </div>
                <div class="panel-body">
@@ -120,7 +120,7 @@
             </div>
          <div class="modal-footer">
 
-            <a href="<?php echo base_url()?>Curso/Curso/delete/<?php echo $estudiante->idEstudiante;?>"
+            <a href="<?php echo base_url()?>Estudiante/Estudiante/delete/<?php echo $estudiante->idEstudiante;?>"
                  class="btn btn-danger btn-labeled">
                  <span class="btn-label"> <i class="fa fa-trash-o"></i></span>Eliminar</a>
             <button type="button" data-dismiss="modal" class="btn btn-primary">Cancelar</button>
