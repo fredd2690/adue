@@ -119,13 +119,18 @@
                <li>
                   <a href="<?php echo base_url();?>assets/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-bar-chart-o"></em>
-                     <span class="item-text">Gestion de Pagos</span>
+                     <span class="item-text">Administracion</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
                         <a href="<?php echo base_url();?>welcome" title="Data Table" data-toggle="" class="no-submenu">
-                           <span class="item-text">No Implementado</span>
+                           <span class="item-text">Cuotas</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url();?>administracion/gestion" title="Data Table" data-toggle="" class="no-submenu">
+                           <span class="item-text">Gestion</span>
                         </a>
                      </li>
                   </ul>
@@ -134,7 +139,7 @@
                <li>
                   <a href="<?php echo base_url();?>assets/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-cog"></em>
-                     <span class="item-text">Administrador</span>
+                     <span class="item-text">Settings</span>
                      <div class="label label-primary pull-right">nuevo</div>
                   </a>
                   <!-- START SubMenu item-->
