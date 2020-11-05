@@ -78,8 +78,8 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href="<?php echo base_url();?>welcome" title="Flot" data-toggle="" class="no-submenu">
-                           <span class="item-text">No Implementado</span>
+                        <a href="<?php echo base_url();?>Cobros/Cobros" title="Flot" data-toggle="" class="no-submenu">
+                           <span class="item-text">Cobrar</span>
                         </a>
                      </li>
                   </ul>
