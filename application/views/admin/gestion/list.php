@@ -2,14 +2,19 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>Admnistracion/Gestion/add" class="btn btn-primary btn-labeled pull-right" data-toggle="modal" data-target="#myModal">
+      <a href="<?php echo base_url();?>Administracion/Gestion/add" class="btn btn-primary btn-labeled pull-right">
         <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Gestion
       </a>
       <h3>Gestion Escolar
          <br>
          <small>Lista</small>
       </h3>
-
+      <?php
+       if($this->session->flashdata('correcto')):?>
+       <div class="alert alert-success">
+         <p><?php echo $this->session->flashdata('correcto');?></p>
+       </div>
+     <?php endif; ?>
 
 
       <!-- START DATATABLE 3-->
@@ -54,10 +59,10 @@
                                           <td>
                                             <div class="btn-group">
 
-                                              <a href="<?php echo base_url();?>curso/curso/view/<?php echo $gestion->idGestion;?>"
+                                              <a href="<?php echo base_url();?>administracion/gestion/view/<?php echo $gestion->idGestion;?>"
                                                  class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
-                                              <a href="<?php echo base_url();?>curso/curso/edit/<?php echo $gestion->idGestion;?>"
-                                                 class="btn btn-warning" data-toggle="modal" data-target="#myModal"> <span class="fa fa-pencil"></span> </a>
+                                              <a href="<?php echo base_url();?>administracion/gestion/edit/<?php echo $gestion->idGestion;?>"
+                                                 class="btn btn-warning" > <span class="fa fa-pencil"></span> </a>
                                               <button data-toggle="modal" data-target="#myModal1" class="btn btn-oval btn-danger "> <span class="fa fa-trash-o"></span> </button>
 
                                             </div>
@@ -69,10 +74,10 @@
                               <tfoot>
                                  <tr>
                                    <th>#</th>
-                                   <th>Curso</th>
-                                   <th>Seccion</th>
-                                   <th>Tutor</th>
-                                   <th>Tutor</th>
+                                   <th>Nombre</th>
+                                   <th>Fecha Inicio</th>
+                                   <th>Fecha de Cierre</th>
+                                   <th>Estado</th>
                                    <th class="sort-alpha">acciones</th>
                                  </tr>
                               </tfoot>

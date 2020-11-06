@@ -15,76 +15,77 @@ class Gestion extends CI_Controller {
     );
 		$this->load->view('layouts/header');
 		$this->load->view('layouts/aside');
-		$this->load->view('admin/gestion/list', $data );//,$data);
+		$this->load->view('admin/gestion/list', $data );
 		$this->load->view('layouts/footer');
   }
 
-  // public function add()
-	// {
+  public function add()
+	{
+    $this->load->view('layouts/header');
+  	$this->load->view('layouts/aside');
+		$this->load->view('admin/gestion/add');
+    $this->load->view('layouts/footer');
+  }
   //
-	// 	$this->load->view('admin/curso/add');
-  //
-  // }
-  //
-  // public function agregardb()
-	// {
-  //   $curso = $this->input->post("nombre");
-  //   $seccion = $this->input->post("seccion");
-  //   $tutor =$this->input->post("tutor");
-  //   $data = array('nombre' => $curso,
-  //                 'seccion'=>$seccion,
-  //                 'tutor'=>$tutor,
-  //               );
-  //   if ($this->Curso_model->agregarcurso($data)) {
-  //      redirect("Curso/Curso/index");
-  //   }else {
-  //     $this->session->set_flashdata("error","No se pudo guardar la informacion");
-  //     redirect(base_url()."/Curso/Curso/add");
-  //   }
-  // }
-  //
-  //
-  // public function edit($idcurso)
-  //   {
-  //     $data = array('curso' => $this->Curso_model->getCurso($idcurso));
-  //
-  //     //$this->load->view('layouts/header');
-  //     //$this->load->view('layouts/aside');
-  //   	$this->load->view('admin/curso/edit',$data);
-  //   	//$this->load->view('layouts/footer');
-  //   }
-  //
-  // public function view($idCurso)
-  //   {
-  //     $data = array('curso' => $this->Curso_model->getCurso($idCurso));
-  //
-  //     //$this->load->view('layouts/header');
-  //     //$this->load->view('layouts/aside');
-  //   	$this->load->view('admin/curso/view',$data);
-  //   	//$this->load->view('layouts/footer');
-  //   }
-  //
-  // public function updatedb()
-  //   {
-  //     $idcurso = $this->input->post("idcurso");
-  //     $nombre = $this->input->post("nombre");
-  //     $seccion = $this->input->post("seccion");
-  //     $tutor =$this->input->post("tutor");
+  public function agregardb()
+	{
+    $nombre = $this->input->post("nombre");
+    $fechaInicio = $this->input->post("fechaInicio");
+    $fechaCierre =$this->input->post("fechaCierre");
+    $data = array('nombre' => $nombre,
+                  'fechaInicio'=>$fechaInicio,
+                  'fechaCierre'=>$fechaCierre,
+                );
+    if ($this->Gestion_model->agregarGestion($data)) {
+       redirect("Administracion/Gestion/index");
+    }else {
+      $this->session->set_flashdata("error","No se pudo guardar la informacion");
+      redirect(base_url()."Administracion/Gestion/add");
+    }
+  }
   //
   //
-  //     $data = array('idcurso' => $idcurso,
-  //                   'nombre'=>$nombre,
-  //                   'seccion'=>$seccion,
-  //                   'tutor'=>$tutor,
-  //                 );
-  //     if ($this->Curso_model->update($idcurso,$data)) {
-  //        redirect("Curso/Curso/index");
-  //     }else {
-  //       $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
-  //       redirect(base_url()."/Curso/curso/edit".$idcurso);
-  //     }
+  public function edit($idgestion)
+    {
+      $data = array('gestion' => $this->Gestion_model->getGestion($idgestion));
+
+      $this->load->view('layouts/header');
+      $this->load->view('layouts/aside');
+    	$this->load->view('admin/gestion/edit',$data);
+    	$this->load->view('layouts/footer');
+    }
   //
-  //   }
+  public function view($idGestion)
+    {
+      $data = array('gestion' => $this->Gestion_model->getGestion($idGestion));
+
+      //$this->load->view('layouts/header');
+      //$this->load->view('layouts/aside');
+    	$this->load->view('admin/gestion/view',$data);
+    	//$this->load->view('layouts/footer');
+    }
+  //
+  public function updatedb()
+    {
+      $idgestion = $this->input->post("idGestion");
+      $nombre = $this->input->post("nombre");
+      $fechaInicio = $this->input->post("fechaInicio");
+      $fechaCierre =$this->input->post("fechaCierre");
+
+
+      $data = array('idGestion' => $idgestion,
+                    'nombre'=>$nombre,
+                    'fechaInicio'=>$fechaInicio,
+                    'fechaCierre'=>$fechaCierre,
+                  );
+      if ($this->Gestion_model->update($idGestion,$data)) {
+         redirect("Administracion/gestion/index");
+      }else {
+        $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
+        redirect(base_url()."Administracion/gestion/edit".$idcurso);
+      }
+
+    }
   //
   // public function delete($idcurso)
   //   {

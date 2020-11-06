@@ -10,24 +10,24 @@ class Gestion_model extends CI_Model {
 			return $resultados->result();
 	}
 
-	// public function agregarcurso($data)
-	// {
-	// 	return $this->db->insert('curso',$data);
-	// }
+	public function agregarGestion($data)
+	{
+		return $this->db->insert('gestion',$data);
+	}
 	//
-	// public function getCurso($idCurso)
-	// {
-	// 	$this->db->where("idCurso",$idCurso);
-	// 	$resultado = $this->db->get("curso");
-	// 	return $resultado->row();
-	// }
+	public function getGestion($idGestion)
+	{
+		$this->db->where("idGestion",$idGestion);
+		$resultado = $this->db->get("gestion");
+		return $resultado->row();
+	}
 	// //
-	// public function update($idcurso,$data)
-	// {
-	// 	$this->db->where('idcurso',$idcurso);
-	// 	return $this->db->update('curso',$data);
-	// }
-	//
+	public function update($idGestion,$data)
+	{
+		$this->db->where('idGEstion',idGestion);
+		return $this->db->update('curso',$data);
+	}
+
 	// public function deleteCurso($idcurso,$data)
 	// {
 	// 	$this->db->where('idcurso',$idcurso);
