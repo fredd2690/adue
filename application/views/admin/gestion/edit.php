@@ -8,7 +8,7 @@
          <div class="col-lg-5 ">
            <div class="panel panel-default">
                <div class="panel-heading">Nuevo |
-                  <small>Curso</small>
+                  <small>Gestion</small>
                </div>
                  <?php if($this->session->flashdata("error")):?>
                          <div class="alert alert-danger">
@@ -17,6 +17,7 @@
                  <?php endif; ?>
                  <form action="<?php echo base_url();?>Administracion/gestion/updatedb" method="post" role="form" class="mb-lg">
                       <div class="panel-body">
+                          <input type="hidden" id="idGestion" name="idGestion" value="<?php echo $gestion->idGestion?>" class="form-control">
                            <div class="form-group">
                               <label for="nombre">Gestion: (*)</label>
                               <input type="text" id="nombre"  name="nombre" value="<?php echo $gestion->nombre; ?>" placeholder="Ingresa la gestion escolar" class="form-control" minlegth="2" maxlength="10" required="">
@@ -25,7 +26,7 @@
                               <label for="fechaInicio" class="col-sm-3 control-label">fecha Inicio:</label>
                               <div class="col-sm-5">
                                 <div data-pick-time="false" class="datetimepicker input-group date mb-lg">
-                                  <input type="text" id="fechaInicio"  name="fechaInicio" placeholder="<?php echo $gestion->fechaInicio; ?>" class="form-control">
+                                  <input type="text" id="fechaInicio"  name="fechaInicio" value="<?php echo $gestion->fechaInicio; ?>" class="form-control">
                                   <span class="input-group-addon">
                                      <span class="fa fa-calendar"></span>
                                   </span>
@@ -36,7 +37,7 @@
                               <label for="fechaCierre" class="col-sm-3 control-label">fecha clausura:</label>
                               <div class="col-sm-5">
                                 <div data-pick-time="false" class="datetimepicker input-group date mb-lg">
-                                  <input type="text" id="fechaCierre" name="fechaCierre" placeholder="<?php echo $gestion->fechaCierre;?>" class="form-control">
+                                  <input type="text" id="fechaCierre" name="fechaCierre" value="<?php echo $gestion->fechaCierre;?>" class="form-control">
                                   <span class="input-group-addon">
                                      <span class="fa fa-calendar"></span>
                                   </span>

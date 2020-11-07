@@ -45,9 +45,9 @@ class Gestion extends CI_Controller {
   }
   //
   //
-  public function edit($idgestion)
+  public function edit($idGestion)
     {
-      $data = array('gestion' => $this->Gestion_model->getGestion($idgestion));
+      $data = array('gestion' => $this->Gestion_model->getGestion($idGestion));
 
       $this->load->view('layouts/header');
       $this->load->view('layouts/aside');
@@ -73,16 +73,16 @@ class Gestion extends CI_Controller {
       $fechaCierre =$this->input->post("fechaCierre");
 
 
-      $data = array('idGestion' => $idgestion,
+      $data = array( "idGestion"=>$idgestion,
                     'nombre'=>$nombre,
                     'fechaInicio'=>$fechaInicio,
                     'fechaCierre'=>$fechaCierre,
                   );
-      if ($this->Gestion_model->update($idGestion,$data)) {
+      if ($this->Gestion_model->update($idgestion,$data)) {
          redirect("Administracion/gestion/index");
       }else {
-        $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
-        redirect(base_url()."Administracion/gestion/edit".$idcurso);
+        $this->session->set_flashdata("error","No se pudo Actualizar la informacion");
+        redirect(base_url()."Administracion/gestion/edit".$idGestion);
       }
 
     }

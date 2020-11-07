@@ -6,7 +6,7 @@ class Gestion_model extends CI_Model {
 	public function getGestiones()
 	{
 		$this->db->where("estado<","2");
-		$resultados = $this->db->get("Gestion");
+		$resultados = $this->db->get("gestion");
 			return $resultados->result();
 	}
 
@@ -24,8 +24,8 @@ class Gestion_model extends CI_Model {
 	// //
 	public function update($idGestion,$data)
 	{
-		$this->db->where('idGEstion',idGestion);
-		return $this->db->update('curso',$data);
+		$this->db->where('idGestion',$idGestion);
+		return $this->db->update('gestion',$data);
 	}
 
 	// public function deleteCurso($idcurso,$data)

@@ -135,3 +135,16 @@
    </div>
 </div>
  <!-- END modal-->
+ <!-- END modal
+ <script type="text/javascript">
+  $(".btn-view").on("click",function(){
+    var boton =$(this).val();
+    var info = boton.split("*");
+    resp = <p><strong>nombre: </strong>+info[1]+" </p>"
+    resp = <p><strong>fecha Inicio: </strong>+info[2]+" </p>"
+    resp = <p><strong>fecha Cierre: </strong>+info[3]+" </p>"
+    $("#modal-default .modal-body").html(resp);
+  });
+ </script>
+
+ -->
