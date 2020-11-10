@@ -31,10 +31,30 @@
 <script src="<?php echo base_url();?>assets/vendor/moment/min/moment-with-langs.min.js"></script>
 <script src="<?php echo base_url();?>assets/vendor/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 <!-- Tags input-->
-
 <!-- App Main-->
 <script src="<?php echo base_url();?>assets/app/js/app.js"></script>
 <!-- END Scripts-->
+
+<!--Start Select-->
+<script src="<?php echo base_url();?>assets/vendor/select/bootstrap-select.min.js"></script>
+<!-- End Select-->
+<!--Start autocomplete-->
+<script src="<?php echo base_url();?>assets/vendor/jqueryui/jquery-ui/jquery-ui.js"></script>
+<!-- End autocomplete-->
+
+<script>
+  $("#cuota").autocomplete({
+    source:function(request,response){
+      $.ajax({
+        url: base_url+
+      });
+    },
+    minLength:,
+    select:,
+
+  });
+</script>
+
 </body>
 
 </html>
