@@ -1,13 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cobros_model extends CI_Model {
+class Combo_model extends CI_Model {
 	//Esta funcion retorna todos los registros de la tabla cursos
-	public function getCobros()
+	public function comboTabla($tabla)
 	{
-		$this->db->select("p.*,e.*");
+		$this->db->where("estado","1");
+		$resultados = $this->db->get($tabla);
+			return $resultados->result();
+	}
+
+	public function estudiantePersonaCurso()
+	{
+		$this->db->select("p.*,e.*,c.*");
 		$this->db->from("persona p");
 		$this->db->join("estudiante e", "p.idpersona = e.idPersona");
+		$this->db->join("curso c", "e.idcurso = c.idcurso");
 		$this->db->where("e.estado","1");
 		$resultados = $this->db->get();
 			return $resultados->result();

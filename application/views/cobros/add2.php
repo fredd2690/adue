@@ -21,8 +21,8 @@
                   <div class="content-wrapper">
                       <section class="content-header">
                           <h1>
-                              <a href="<?php echo base_url();?>mantenimiento/ccolor/">Ventas <i class="fa fa-shopping-cart"></i></a>
-                              <small>Nuevo</small>
+                              <a >Cobros <i class="fa fa-money"></i></a>
+
                           </h1>
                       </section>
                       <section class="content">
@@ -60,24 +60,34 @@
                                           </div>
                                           <div class="col-md-12">
                                               <div class="form-group">
-                                                  <label for="">Cliente:</label>
-                                                  <select name="txtcliente" id="txtcliente" class="form-control selectpicker" data-live-search="true" required>
-                                                      <option value="">Seleccione...</option>
+                                                  <label for="estudiante">Estudiante:</label>
+                                                  <select name="estudiante" id="Estudiante" class="form-control selectpicker" data-live-search="true">
+                                                      <option value="">...</option>
+                                                      <?php foreach ($listaestudiantes as $estudiante): ?>
+                                                        <option value="<?php echo $estudiante->idEstudiante ?>">
+                                                          <?php echo $estudiante->nombre." ".$estudiante->nombres." ".$estudiante->aPaterno." ".$estudiante->aMaterno; ?>
+                                                        </option>
+                                                      <?php endforeach; ?>
                                                   </select>
                                               </div>
                                           </div>
                                           <div class="col-md-8">
                                               <div class="form-group">
-                                                  <label for="">Producto:</label>
-                                                  <select name="txtproducto" id="txtproducto" class="form-control selectpicker" data-live-search="true" >
+                                                  <label for="">Cuota:</label>
+                                                  <select name="Cuota" id="Cuota" class="form-control selectpicker" data-live-search="true" >
                                                       <option value="">Seleccione...</option>
+                                                      <?php foreach ($listacuotas as $cuota): ?>
+                                                        <option value="<?php echo $cuota->idCuota;?>">
+                                                          <?php echo $cuota->concepto; ?>
+                                                        </option>
+                                                      <?php endforeach; ?>
                                                   </select>
                                               </div>
                                           </div>
                                           <div class="col-md-2">
                                               <div class="form-group">
                                                   <label for="">&nbsp;</label>
-                                                  <button id="btn-agregar" type="button" class="btn btn-primary btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
+                                                  <button id="btn-agregar" type="button" class="btn btn-primary labeled btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
                                               </div>
                                           </div>
                                           <div class="col-md-2">
@@ -90,7 +100,7 @@
                                               <div class="table-responsive">
                                                   <table id="detventas" class="table table-bordered table-striped table-hover">
                                                       <thead>
-                                                          <tr class="bg-green">
+                                                          <tr class="bg-success">
                                                               <td>Código</td>
                                                               <td>Nombre</td>
                                                               <td>Imagen</td>

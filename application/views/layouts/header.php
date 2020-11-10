@@ -29,21 +29,21 @@
    <!-- Data Table styles-->
    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/datatable/extensions/datatable-bootstrap/css/dataTables.bootstrap.css">
    <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/datatable/extensions/ColVis/css/dataTables.colVis.css">
-   <style>
-   @import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
-   .titularFuente2{
-     font-family: 'Asset', cursive;
-   }
-   </style>
-
-
-   <!-- END Page Custom CSS-->
+   <!-- END Data Table styles-->
+   <!--Start Select-->
+   <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/select/bootstrap-select.min.css">
+   <!-- End Select-->
+   <!--Start autocomplete-->
+   <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/jqueryui/jquery-ui/jquery-ui.css">
+   <!-- END autocomplete Custom CSS-->
    <!-- App CSS-->
    <link rel="stylesheet" href="<?php echo base_url();?>assets/app/css/app.css">
    <!-- Modernizr JS Script-->
    <script src="<?php echo base_url();?>assets/vendor/modernizr/modernizr.js" type="application/javascript"></script>
    <!-- FastClick for mobiles-->
    <script src="<?php echo base_url();?>assets<?php echo base_url();?>assetsvendor/fastclick/fastclick.js" type="application/javascript"></script>
+
+
 </head>
 
 <body>
