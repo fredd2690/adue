@@ -87,11 +87,9 @@
                                           <div class="col-md-2">
                                               <div class="form-group">
                                                   <label for="">&nbsp;</label>
-<<<<<<< HEAD
                                                   <button id="btn-agregar" value="" type="button" class="btn btn-primary labeled btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
-=======
-                                                  <button id="btn-agregar" type="button" class="btn btn-primary labeled btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
->>>>>>> cobros
+
+
                                               </div>
                                           </div>
                                           <div class="col-md-2">
