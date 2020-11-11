@@ -2,8 +2,8 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>Estudiante/estudiante/add" class="btn btn-primary btn-labeled pull-right">
-        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Estudiante
+      <a href="<?php echo base_url();?>cobros/cobros/add" class="btn btn-primary btn-labeled pull-right">
+        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Cobrar
       </a>
       <h3>Estudiantes
          <br>
@@ -33,7 +33,7 @@
                          <?php $cont = 1; ?>
                          <?php foreach ($datos as $dato): ?>
                                <tr class="gradeX">
-                                  
+
 
                                   <td>
                                     <div class="btn-group">

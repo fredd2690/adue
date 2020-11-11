@@ -41,6 +41,7 @@
 <!--Start autocomplete-->
 <script src="<?php echo base_url();?>assets/vendor/jqueryui/jquery-ui/jquery-ui.js"></script>
 <!-- End autocomplete-->
+<<<<<<< HEAD
 
 <script>
   $("#cuota").autocomplete({
@@ -55,6 +56,8 @@
   });
 </script>
 
+=======
+>>>>>>> cobros
 </body>
 
 </html>

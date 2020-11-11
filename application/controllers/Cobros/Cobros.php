@@ -6,6 +6,7 @@ class Cobros extends CI_Controller {
   public function __construct(){
   parent::__construct();
   $this->load->model("Cobros_model");
+  $this->load->model("Combo_model");
   }
 
 	public function index()
@@ -19,13 +20,18 @@ class Cobros extends CI_Controller {
 		$this->load->view('layouts/footer');
   }
 
-  // public function add()
-  // {
-  //     $this->load->view('layouts/header');
-  //   	$this->load->view('layouts/aside');
-  //     $this->load->view('admin/estudiante/add');
-  //     $this->load->view('layouts/footer');
-  // }
+  public function add()
+  {
+      $data = array (
+        'listaestudiantes' => $this->Combo_model->estudiantePersonaCurso(),
+        'listacuotas' => $this->Combo_model->comboTabla("cuota"),
+      );
+
+      $this->load->view('layouts/header');
+    	$this->load->view('layouts/aside');
+      $this->load->view('cobros/add2', $data);
+      $this->load->view('layouts/footer');
+  }
   //
   // public function agregardb()
   // {
