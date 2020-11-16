@@ -5,12 +5,23 @@ class Cobros_model extends CI_Model {
 	//Esta funcion retorna todos los registros de la tabla cursos
 	public function getCobros()
 	{
-		$this->db->select("p.*,e.*");
+		$this->db->select("p.*,e.*,d.*,c.*");
 		$this->db->from("persona p");
-		$this->db->join("estudiante e", "p.idpersona = e.idPersona");
+		$this->db->join("estudiante e", "p.idPersona = e.idPersona");
+		$this->db->join("detalledepago d", "e.idEstudiante = d.idEstudiante");
+		$this->db->join("cuota c", "d.idCuota = c.idCuota");
 		$this->db->where("e.estado","1");
 		$resultados = $this->db->get();
 			return $resultados->result();
+	}
+
+	//El isguiente metodo es para llenar el boton añadir
+	public function getCuota($valor){
+		$this->db->select("idCuota as id,concepto,precio");
+		$this->db->from("cuota");
+		$this->db->like("nombre",$valor);
+		$resultados = $this->db->get();
+		return $resultados->result_array();
 	}
 
 	// public function agregarcurso($data)

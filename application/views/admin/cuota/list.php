@@ -2,10 +2,10 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>Administracion/Gestion/add" class="btn btn-primary btn-labeled pull-right">
-        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Gestion
+      <a href="<?php echo base_url();?>Administracion/Cuota/add" class="btn btn-primary btn-labeled pull-right">
+        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar cuota
       </a>
-      <h3>Gestion Escolar
+      <h3>Mensualidades y Cuotas
          <br>
          <small>Lista</small>
       </h3>
@@ -21,7 +21,7 @@
       <div class="row">
          <div class="col-lg-12">
             <div class="panel panel-default">
-               <div class="panel-heading">Gestion |
+               <div class="panel-heading">Cuotas |
                   <small>detalles</small>
                </div>
                <div class="panel-body">
@@ -29,39 +29,39 @@
                      <thead>
                         <tr>
                           <th>#</th>
-                          <th>Nombre</th>
-                          <th>Fecha Inicio</th>
-                          <th>Fecha de Cierre</th>
-                          <th>Estado</th>
+                          <th>Concepto</th>
+                          <th>Precio</th>
+                          <th>Gestion</th>
+                          <th>Fecha de Pago</th>
                           <th class="sort-alpha">acciones</th>
                         </tr>
                      </thead>
                      <tbody>
-                             <?php  if(!empty($gestiones)):?>
+                             <?php  if(!empty($cuotas)):?>
                                  <?php $cont = 1; ?>
-                                 <?php foreach ($gestiones as $gestion): ?>
+                                 <?php foreach ($cuotas as $cuota): ?>
                                        <tr class="gradeX">
                                           <td><?php echo $cont; ?></td>
-                                          <td><?php echo $gestion->nombre; ?></td>
-                                          <td><?php echo $gestion->fechaInicio; ?></td>
-                                          <td><?php echo $gestion->fechaCierre; ?></td>
+                                          <td><?php echo $cuota->concepto; ?></td>
+                                          <td><?php echo $cuota->precio; ?></td>
+                                          <td><?php echo $cuota->nombre; ?></td>
 
                                             <?php
-                                              if ($gestion->estado==1){
+                                              if ($cuota->estado==1){
                                                 $style='class="label label-success"';
                                                 $style2='class="label label-warning"';
                                                 echo "<td><p><span $style><font style='vertical-align: inherit;'>Activo</font></span></p></td>";
                                               }else{
                                                 echo "<td><p><span $style2><font style='vertical-align: inherit;'>Inactivo</font></span></p></td>";
                                               }
-                                            ?>
+                                               ?>
 
                                           <td>
                                             <div class="btn-group">
 
-                                              <a href="<?php echo base_url();?>administracion/gestion/view/<?php echo $gestion->idGestion;?>"
+                                              <a href="<?php echo base_url();?>administracion/gestion/view/<?php echo $cuota->idCuota;?>"
                                                  class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
-                                              <a href="<?php echo base_url();?>administracion/gestion/edit/<?php echo $gestion->idGestion;?>"
+                                              <a href="<?php echo base_url();?>administracion/gestion/edit/<?php echo $cuota->idCuota;?>"
                                                  class="btn btn-warning" > <span class="fa fa-pencil"></span> </a>
                                               <button data-toggle="modal" data-target="#myModal1" class="btn btn-oval btn-danger "> <span class="fa fa-trash-o"></span> </button>
 
@@ -74,10 +74,10 @@
                               <tfoot>
                                  <tr>
                                    <th>#</th>
-                                   <th>Nombre</th>
-                                   <th>Fecha Inicio</th>
-                                   <th>Fecha de Cierre</th>
-                                   <th>Estado</th>
+                                   <th>Concepto</th>
+                                   <th>Precio</th>
+                                   <th>Gestion</th>
+                                   <th>Fecha de Pago</th>
                                    <th class="sort-alpha">acciones</th>
                                  </tr>
                               </tfoot>

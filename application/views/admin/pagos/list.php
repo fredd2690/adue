@@ -2,10 +2,10 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>cobros/cobros/add" class="btn btn-primary btn-labeled pull-right">
-        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Cobrar
+      <a href="<?php echo base_url();?>Pagos/pagos/add" class="btn btn-primary btn-labeled pull-right">
+        <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Agregar Pago
       </a>
-      <h3>Estudiantes
+      <h3>Pagos
          <br>
          <small>Lista</small>
       </h3>
@@ -14,56 +14,35 @@
       <div class="row">
          <div class="col-lg-12">
             <div class="panel panel-default">
-               <div class="panel-heading">Estudiantes |
+               <div class="panel-heading">Pagos |
                   <small>detalles</small>
                </div>
-               <div class="panel-body">
+               <div class="col-lg-12">
+                  <div class="panel-body">
                   <table id="datatable3" class="table table-striped table-hover">
                      <thead>
                         <tr>
                           <th>#</th>
-                          <th>Estudiante</th>
-                          <th>motivo de Pago</th>
-                          <th>Importe</th>
-                          <th class="sort-alpha">fecha de pago</th>
+                          <th>Nombre</th>
+                          <th>Curso</th>
+                          <th>Deuda</th>
+                          <th class="sort-alpha">acciones</th>
                         </tr>
                      </thead>
                      <tbody>
-                       <?php  if(!empty($datos)):?>
-                         <?php $cont = 1; ?>
-                         <?php foreach ($datos as $dato): ?>
-                               <tr class="gradeX">
-                                 <td><?php echo $cont; ?></td>
-                                 <td><?php echo $dato->nombres." ".$dato->aPaterno." ".$dato->aMaterno; ?></td>
-                                 <td><?php echo $dato->concepto; ?></td>
-                                 <td><?php echo $dato->precio; ?></td>
-                                 <td><?php echo $dato->fechaDePago; ?></td>
-                                  <!-- <td> -->
-                                    <!-- <div class="btn-group">
 
-                                      <a href="</?php echo base_url();?>curso/curso/view/</?php echo $estudiante->idEstudiante;?>"
-                                         class="btn btn-oval btn-primary" data-toggle="modal" data-target="#myModal"> <span class="fa fa-search"></span> </a>
-                                      <a href="</?php echo base_url();?>curso/curso/edit/</?php echo $estudiante->idEstudiante;?>"
-                                         class="btn btn-warning" data-toggle="modal" data-target="#myModal"> <span class="fa fa-pencil"></span> </a>
-                                      <button data-toggle="modal" data-target="#myModal1" class="btn btn-oval btn-danger "> <span class="fa fa-trash-o"></span> </button>
-
-                                    </div> -->
-                                  <!-- </td> -->
-                              </tr>
-                              <?php $cont++; ?>
-                        <?php endforeach; ?>
-                      <?php endif; ?>
                         <tfoot>
                            <tr>
                              <th>#</th>
-                             <th>Estudiante</th>
-                             <th>motivo de Pago</th>
-                             <th>Importe</th>
-                             <th class="sort-alpha">fecha de Pago</th>
+                             <th>Nombre</th>
+                             <th>curso</th>
+                             <th>deuda</th>
+                             <th class="sort-alpha">acciones</th>
                            </tr>
                         </tfoot>
                      </tbody>
                   </table>
+               </div>
                </div>
             </div>
          </div>

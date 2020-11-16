@@ -26,7 +26,6 @@
                           <th>Cedula</th>
                           <th>Sexo</th>
                           <th>Fecha de Nacimiento</th>
-                          <th>Matricula</th>
                           <th>Celular</th>
                           <th>Direccion</th>
                           <th>Curso</th>
@@ -43,7 +42,6 @@
                                   <td><?php echo $estudiante->ci; ?></td>
                                   <td><?php echo $estudiante->sexo; ?></td>
                                   <td><?php echo $estudiante->fechaNacimiento; ?></td>
-                                  <td><?php echo $estudiante->matricula; ?></td>
                                   <td><?php echo $estudiante->celular; ?></td>
                                   <td><?php echo $estudiante->direccion; ?></td>
                                   <td><?php echo $estudiante->nombre." ".$estudiante->seccion; ?></td>

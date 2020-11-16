@@ -49,9 +49,10 @@
                               <br>
                            </div>
                            <button type="submit" class="btn btn-labeled btn-success pull-left">
-                             <span class="btn-label"><i class="fa fa-check-circle"></i></span>Agregar</button>
+                             <span class="btn-label"><i class="fa fa-check-circle"></i></span>Agregar
+                           </button>
                       <!--       <button type="button" data-dismiss="modal" class="btn btn-primary pull-right">Cancelar</button>
-                      -->       <a href="<?php echo base_url()?>Administrador/Usuarios/" class="btn btn-danger btn-labeled pull-right">
+                      -->  <a href="<?php echo base_url()?>Administrador/Usuarios/" class="btn btn-danger btn-labeled pull-right">
                                 <span class="btn-label"><i class="fa fa-ban"></i></span>Cancelar
                             </a>
                      </div>

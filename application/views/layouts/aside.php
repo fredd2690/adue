@@ -71,7 +71,7 @@
                   <!-- END SubMenu item-->
                </li>
                <li>
-                  <a href="<?php echo base_url();?>assets/#" title="Charts" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url();?>/#" title="Charts" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-money"></em>
                      <span class="item-text">Cobros</span>
                   </a>
@@ -83,10 +83,17 @@
                         </a>
                      </li>
                   </ul>
+                  <ul class="nav collapse ">
+                     <li>
+                        <a href="<?php echo base_url();?>Pagos/pagos" title="Flot" data-toggle="" class="no-submenu">
+                           <span class="item-text">Pagos</span>
+                        </a>
+                     </li>
+                  </ul>
                   <!-- END SubMenu item-->
                </li>
                <li>
-                  <a href="<?php echo base_url();?>assets/#" title="Charts" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url();?>/#" title="Charts" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-users"></em>
                      <span class="item-text">Estudiantes</span>
                   </a>
@@ -101,7 +108,7 @@
                   <!-- END SubMenu item-->
                </li>
                <li>
-                  <a href="<?php echo base_url();?>assets/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url();?>/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-sitemap"></em>
                      <span class="item-text">Cursos</span>
                   </a>
@@ -117,14 +124,14 @@
                   <!-- END SubMenu item-->
                </li>
                <li>
-                  <a href="<?php echo base_url();?>assets/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url();?>/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-bar-chart-o"></em>
                      <span class="item-text">Administracion</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href="<?php echo base_url();?>welcome" title="Data Table" data-toggle="" class="no-submenu">
+                        <a href="<?php echo base_url();?>administracion/cuota" title="Data Table" data-toggle="" class="no-submenu">
                            <span class="item-text">Cuotas</span>
                         </a>
                      </li>
@@ -137,7 +144,7 @@
                   <!-- END SubMenu item-->
                </li>
                <li>
-                  <a href="<?php echo base_url();?>assets/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url();?>/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-cog"></em>
                      <span class="item-text">Settings</span>
                      <div class="label label-primary pull-right">nuevo</div>
@@ -159,7 +166,7 @@
                <li class="nav-footer">
                   <div class="nav-footer-divider"></div>
                   <!-- START button group-->
-                  <div class="btn-group text-center">
+                  <!-- <div class="btn-group text-center">
                      <button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
                         <em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
                         </em>
@@ -170,7 +177,7 @@
                      <button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
                         <em class="fa fa-sign-out text-muted"></em>
                      </button>
-                  </div>
+                  </div> -->
                   <!-- END button group-->
                </li>
             </ul>

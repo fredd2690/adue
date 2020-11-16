@@ -18,6 +18,9 @@
    <title>Sistema UE</title>
    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!--[if lt IE 9]><script src="</?php echo base_url();?>assetshttps://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="</?php echo base_url();?>assetshttps://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/vendor/bootstrap/css/myStyle.css">
+
+
    <!-- Bootstrap CSS-->
    <link rel="stylesheet" href="<?php echo base_url();?>assets/app/css/bootstrap.css">
    <!-- Vendor CSS-->
@@ -47,6 +50,10 @@
 </head>
 
 <body>
+
+  <div id="contenedor">
+
+
    <!-- START Main wrapper-->
    <section class="wrapper">
      <!-- START Top Navbar-->

@@ -1,3 +1,5 @@
+</div>
+
 <!-- START Scripts-->
 <!-- Main vendor Scripts-->
 <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
@@ -43,17 +45,83 @@
 <!-- End autocomplete-->
 
 <script>
-  $("#cuota").autocomplete({
-    source:function(request,response){
-      $.ajax({
-        url: base_url+
-      });
-    },
-    minLength:,
-    select:,
 
-  });
+$('#picker').datepicker({
+  timepicker:false,
+  datepicker:true,
+  format:'Y-m-d',
+  value:
+})
+
+// $(document).ready(functicon(){
+//
+//   var base_url="<?php echo base_url(); ?>";
+//
+//   //check 19
+//   //$("#cuota").autocomplete({
+//     source:function(request,response){
+//       $.ajax({
+//         url: base_url+"cobros/cobros/getCuota",
+//         type:"POST",
+//         dataType:"JSON",
+//         data: {valor:request.term},
+//               success:function(data){response(data);
+//               }
+//         });
+//     },
+//     minLength:2,
+//     select:function(event, ui){
+//       data = ui.item.id + "*"+ui.item.concepto + "*"+ui.item.precio;
+//       $("#btn-agregar").val(data);
+//     },
+//   })
+//
+//   //$("#comprobantes").on("change",function(){
+//     source:function(request,response){
+//       $.ajax({
+//         url: base_url+"cobros/cobros/getCuota",
+//         type:"POST",
+//         dataType:"JSON",
+//         data: {valor:request.term},
+//               success:function(data){response(data);
+//               }
+//         });
+//     },
+//     minLength:2,
+//     select:function(event, ui){
+//       data = ui.item.id + "*"+ui.item.concepto + "*"+ui.item.precio;
+//       $("#btn-agregar").val(data);
+//     },
+//   })
+//
+//
+// })
+//
+// function generarnumero(numero){
+//   if(numero>=99999 $$ numero<999999){
+//     return Number(numero)+1;
+//   }
+//   if(numero>=9999 $$ numero<99999){
+//     return "0" + (Number(numero)+1);
+//   }
+//   if(numero>=999 $$ numero<9999){
+//     return "00" + (Number(numero)+1);
+//   }
+//   if(numero>=99 $$ numero<999){
+//     return "000" + (Number(numero)+1);
+//   }
+//   if(numero>=9 $$ numero<99){
+//     return "0000" + (Number(numero)+1);
+//   }
+//   if(numero<9){
+//     return "00000" + (Number(numero)+1);
+//   }
+//
+// }
+
 </script>
+
+
 
 </body>
 

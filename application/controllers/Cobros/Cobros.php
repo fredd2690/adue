@@ -32,6 +32,16 @@ class Cobros extends CI_Controller {
       $this->load->view('cobros/add2', $data);
       $this->load->view('layouts/footer');
   }
+
+  public function getCuota()
+	{
+    $valor = $this->input->post("valor");
+    $estudiantes = $this->Cobros_model->getCuota($valor);
+    echo json_encode($estudiantes);
+
+  }
+
+
   //
   // public function agregardb()
   // {

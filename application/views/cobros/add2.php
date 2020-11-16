@@ -2,12 +2,12 @@
 <section>
    <!-- START Page content-->
    <section class="main-content">
-      <a href="<?php echo base_url();?>cobros/cobros/add" class="btn btn-primary btn-labeled pull-right">
+      <!-- <a href="<?php echo base_url();?>cobros/cobros/add" class="btn btn-primary btn-labeled pull-right">
         <span class="btn-label"><i class="fa fa-plus-circle"></i></span>Cobrar
-      </a>
-      <h3>Estudiantes
+      </a> -->
+      <h3>registro de pagos
          <br>
-         <small>Lista</small>
+         <small>----</small>
       </h3>
 
       <!-- START DATATABLE 3-->
@@ -22,7 +22,6 @@
                       <section class="content-header">
                           <h1>
                               <a >Cobros <i class="fa fa-money"></i></a>
-
                           </h1>
                       </section>
                       <section class="content">
@@ -52,12 +51,12 @@
                                                   <input type="text" class="form-control" id="txtnum_documento" name="txtnum_documento" readonly>
                                               </div>
                                           </div>
-                                          <div class="col-md-3">
+                                          <!-- <div class="col-md-3">
                                               <div class="form-group">
                                                   <label for="">Fecha:</label>
                                                   <input type="date" class="form-control" name="txtfecha" value="<?php echo date("Y-m-d");?>" required>
                                               </div>
-                                          </div>
+                                          </div> -->
                                           <div class="col-md-12">
                                               <div class="form-group">
                                                   <label for="estudiante">Estudiante:</label>
@@ -73,11 +72,11 @@
                                           </div>
                                           <div class="col-md-8">
                                               <div class="form-group">
-                                                  <label for="">Cuota:</label>
+                                                  <label for="">Mensualidad o concepto a Pagar:</label>
                                                   <select name="Cuota" id="Cuota" class="form-control selectpicker" data-live-search="true" >
                                                       <option value="">Seleccione...</option>
                                                       <?php foreach ($listacuotas as $cuota): ?>
-                                                        <option value="<?php echo $cuota->idCuota;?>">
+                                                        <option value="<?php echo $cuota->idCuota; ?>">
                                                           <?php echo $cuota->concepto; ?>
                                                         </option>
                                                       <?php endforeach; ?>
@@ -88,7 +87,6 @@
                                               <div class="form-group">
                                                   <label for="">&nbsp;</label>
                                                   <button id="btn-agregar" value="" type="button" class="btn btn-primary labeled btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
-
 
                                               </div>
                                           </div>
@@ -104,11 +102,8 @@
                                                       <thead>
                                                           <tr class="bg-success">
                                                               <td>Código</td>
-                                                              <td>Nombre</td>
-                                                              <td>Imagen</td>
-                                                              <td>UM</td>
-                                                              <td>Precio Venta</td>
-                                                              <td>Stock </td>
+                                                              <td>Concepto</td>
+                                                              <td>Precio</td>
                                                               <td>Cantidad</td>
                                                               <td>Importe</td>
                                                               <td>X</td>
@@ -119,7 +114,7 @@
                                                   </table>
                                               </div>
                                           </div>
-                                          <div class="col-md-4">
+                                          <!-- <div class="col-md-4">
                                               <div class="form-group">
                                                   <div class="input-group">
                                                       <span class="input-group-addon">Subtotal:</span>
@@ -134,7 +129,7 @@
                                                       <input type="text" class="form-control" placeholder="0.00" name="txttotaligv" readonly="readonly">
                                                   </div>
                                               </div>
-                                          </div>
+                                          </div> -->
                                           <div class="col-md-4">
                                               <div class="form-group">
                                                   <div class="input-group">
