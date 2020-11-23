@@ -26,8 +26,11 @@
                            </div>
                            <div class="form-group">
                               <label for="seccion">Seccion: (*)</label>
-                              <input type="text" id="seccion" name="seccion" placeholder="Ingresa la seccion" class="form-control" minlegth="4" maxlength="20" required="" pattern="[a-zA-Z]+">
-                           </div>
+                              <select name="seccion" id="seccion"  class="form-control" required>
+                                  <option value="Primaria">Primaria</option>
+                                  <option value="Secundaria">Secundaria</option>
+                              </select>
+                           </div>   
                            <div class="form-group">
                               <label for="tutor">Tutor:</label>
                               <input type="text" id="tutor" name="tutor" placeholder="Ingresa el nombre del Tutor de Clase" class="form-control" pattern="[a-z A-Z]+">

@@ -5,9 +5,9 @@ class Cobros_model extends CI_Model {
 	//Esta funcion retorna todos los registros de la tabla cursos
 	public function getCobros()
 	{
-		$this->db->select("p.*,e.*,d.*,c.*");
-		$this->db->from("persona p");
-		$this->db->join("estudiante e", "p.idPersona = e.idPersona");
+		$this->db->select("e.*,d.*,c.*");
+		$this->db->from("estudiante e");
+		$this->db->join("curso c", "c.idCurso = e.idCurso");
 		$this->db->join("detalledepago d", "e.idEstudiante = d.idEstudiante");
 		$this->db->join("cuota c", "d.idCuota = c.idCuota");
 		$this->db->where("e.estado","1");

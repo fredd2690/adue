@@ -28,11 +28,11 @@ class Gestion_model extends CI_Model {
 		return $this->db->update('gestion',$data);
 	}
 
-	// public function deleteCurso($idcurso,$data)
-	// {
-	// 	$this->db->where('idcurso',$idcurso);
-	// 	return $this->db->update('curso',$data);
-	// }
+	public function delete($id,$data)
+	{
+		$this->db->where('idGestion',$id);
+		return $this->db->update('gestion',$data);
+	}
 
 
 

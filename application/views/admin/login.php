@@ -27,19 +27,13 @@
    <!-- App CSS-->
    <link rel="stylesheet" href="<?php echo base_url();?>assets/app/css/app.css">
 
-   <style>
-   @import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
-   .titularFuente1{
-     font-family: 'Asset', cursive;
-   }
-   </style>
    <!-- Modernizr JS Script-->
    <script src="<?php echo base_url();?>assets/vendor/modernizr/modernizr.js" type="application/javascript"></script>
    <!-- FastClick for mobiles-->
    <script src="<?php echo base_url();?>assets/vendor/fastclick/fastclick.js" type="application/javascript"></script>
 </head>
 
-<body>
+<body background="<?php echo base_url();?>assets/app/img/cuadernillo.jpg">
    <!-- START wrapper-->
    <div style="height: 100%; padding: 50px 0; background-color: #2c3037" class="row row-table">
       <div class="col-lg-3 col-md-6 col-sm-8 col-xs-12 align-middle">

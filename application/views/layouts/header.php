@@ -51,8 +51,6 @@
 
 <body>
 
-  <div id="contenedor">
-
 
    <!-- START Main wrapper-->
    <section class="wrapper">
@@ -60,14 +58,14 @@
       <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
          <!-- START navbar header-->
          <div class="navbar-header">
-            <a href="<?php echo base_url();?>assets/#" class="navbar-brand">
-               <div class="brand-logo" class="titularFuente2">ADUE System</div>
+            <a href="<?php echo base_url();?>dashboard" class="navbar-brand">
+               <div class="brand-logo" >ADUE System</div>
                <div class="brand-logo-collapsed">UE</div>
             </a>
          </div>
          <!-- END navbar header-->
          <!-- START Nav wrapper-->
-         <div class="nav-wrapper">
+         <div class="nav-wrapper ">
             <!-- START Left navbar-->
             <ul class="nav navbar-nav">
                <li>

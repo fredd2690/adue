@@ -12,9 +12,8 @@ class Combo_model extends CI_Model {
 
 	public function estudiantePersonaCurso()
 	{
-		$this->db->select("p.*,e.*,c.*");
-		$this->db->from("persona p");
-		$this->db->join("estudiante e", "p.idpersona = e.idPersona");
+		$this->db->select("e.*,c.*");
+		$this->db->from("estudiante e");
 		$this->db->join("curso c", "e.idcurso = c.idcurso");
 		$this->db->where("e.estado","1");
 		$resultados = $this->db->get();

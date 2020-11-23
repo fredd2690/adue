@@ -1,4 +1,3 @@
-</div>
 
 <!-- START Scripts-->
 <!-- Main vendor Scripts-->
@@ -55,7 +54,7 @@ $('#picker').datepicker({
 
 // $(document).ready(functicon(){
 //
-//   var base_url="<?php echo base_url(); ?>";
+//   var base_url="</?php echo base_url(); ?>";
 //
 //   //check 19
 //   //$("#cuota").autocomplete({

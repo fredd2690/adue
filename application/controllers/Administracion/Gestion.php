@@ -87,24 +87,24 @@ class Gestion extends CI_Controller {
 
     }
   //
-  // public function delete($idcurso)
-  //   {
-  //     $data['estado']='0';
-  //     //$data = array('usuario' => $this->Usuarios_model->deleteUsuario($idusuario,$data));
-  //
-  //     //$this->load->view('layouts/header');
-  //     //$this->load->view('layouts/aside');
-  //   	//$this->load->view('admin/usuarios/',$data);
-  //     //$this->load->view('layouts/footer');
-  //
-  //
-  //     if ($this->Curso_model->deleteCurso($idcurso,$data)) {
-  //       redirect("Curso/Curso/index");
-  //    }else {
-  //      $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
-  //      redirect(base_url()."/Curso/Curso/");
-  //    }
-  //   }
+  public function delete($id)
+    {
+      $data['estado']='0';
+      //$data = array('usuario' => $this->Usuarios_model->deleteUsuario($idusuario,$data));
+
+      //$this->load->view('layouts/header');
+      //$this->load->view('layouts/aside');
+    	//$this->load->view('admin/usuarios/',$data);
+      //$this->load->view('layouts/footer');
+
+
+      if ($this->Gestion_model->delete($id,$data)) {
+        redirect("Administracion/Gestion/index");
+     }else {
+       $this->session->set_flashdata("error","No se pudo Actualizasr la informacion");
+       redirect(base_url()."/Administracion/Gestion");
+     }
+    }
 
 
 

@@ -125,7 +125,7 @@
             </div>
          <div class="modal-footer">
 
-            <a href="<?php echo base_url()?>Curso/Curso/delete/<?php echo $gestion->idGestion;?>"
+            <a href="<?php echo base_url()?>Administracion/gestion/delete/<?php echo $gestion->idGestion;?>"
                  class="btn btn-danger btn-labeled">
                  <span class="btn-label"> <i class="fa fa-trash-o"></i></span>Eliminar</a>
             <button type="button" data-dismiss="modal" class="btn btn-primary">Cancelar</button>
