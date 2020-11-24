@@ -8,36 +8,42 @@
          <div class="col-lg-12">
             <div class="panel panel-default">
                <div class="panel-heading">Vista |
-                  <small>curso</small>
+                  <small>Gestión</small>
                </div>
 
 
-               <form action="<?php echo base_url();?>curso/curso/updatedb" method="post" role="form" class="mb-lg">
+               <form action="<?php echo base_url();?>Administracion/gestion/updatedb" method="post" role="form" class="mb-lg">
                  <?php if($this->session->flashdata("error")):?>
                          <div class="alert alert-danger">
                            <p> <?php echo $this->session->flashdata("error"); ?></p>
                          </div>
                  <?php endif; ?>
 
-               <div class="panel-body" >
-                           <input type="hidden" id="idCurso" name="idCurso" va lue="<?php echo $curso->idCurso?>" class="form-control" readonly>
-                           <div class="form-group">
-                              <label for="nombre">Nombre:</label>
-                              <input type="text" id="nombre" name="nombre" value="<?php echo $curso->nombre?>" class="form-control" readonly>
+                      <div class="panel-body" >
+                         <div class="form-group">
+                              <label for="nombre">Gestion: </label>
+                             
+                              <label><?php echo $gestion->nombre; ?></label>
                            </div>
-                           <div class="form-group">
-                              <label for="seccion">Seccion:</label>
-                              <input type="text" id="seccion" name="seccion" value="<?php echo $curso->seccion?>" class="form-control" readonly>
+                           <div class="row">
+                              <label for="fechaInicio" class="col-sm-3 control-label">fecha Inicio:</label>
+                              <div class="col-sm-9">
+                                <label><?php echo $gestion->fechaInicio; ?></label>
+                              </div>
                            </div>
-                           <div class="form-group">
-                              <label for="tutor">Tutor:</label>
-                              <input type="text" id="tutor" name="tutor" value="<?php echo $curso->tutor?>" class="form-control" disabled>
+                           <div class="row">
+                              <label for="fechaCierre" class="col-sm-3 control-label">fecha clausura:</label>
+                              <div class="col-sm-9">
+                                <label><?php echo $gestion->fechaCierre; ?></label>
+                                
+                              </div>
                            </div>
+                      </div>
 
 
                     </form>
 
-                    <a href="<?php echo base_url();?>Curso/Curso/" class="btn btn-primary btn-labeled pull-right">
+                    <a href="<?php echo base_url();?>Administracion/gestion/" class="btn btn-primary btn-labeled pull-right">
                      <span class="btn-label"><i class="fa fa-times-circle"></i></span>Cerrar
                      </a>
 

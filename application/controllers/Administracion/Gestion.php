@@ -29,9 +29,15 @@ class Gestion extends CI_Controller {
   //
   public function agregardb()
 	{
+    
     $nombre = $this->input->post("nombre");
-    $fechaInicio = $this->input->post("fechaInicio");
-    $fechaCierre =$this->input->post("fechaCierre");
+    $str_fecha_inicio = $this->input->post("fechaInicio");
+    $str_fecha_cierre = $this->input->post("fechaCierre");
+
+    $fechaInicio = date('Y-m-d',strtotime($str_fecha_inicio));
+    $fechaCierre = date('Y-m-d',strtotime($str_fecha_cierre));
+    
+
     $data = array('nombre' => $nombre,
                   'fechaInicio'=>$fechaInicio,
                   'fechaCierre'=>$fechaCierre,
@@ -69,8 +75,12 @@ class Gestion extends CI_Controller {
     {
       $idgestion = $this->input->post("idGestion");
       $nombre = $this->input->post("nombre");
-      $fechaInicio = $this->input->post("fechaInicio");
-      $fechaCierre =$this->input->post("fechaCierre");
+      
+      $str_fecha_inicio = $this->input->post("fechaInicio");
+      $str_fecha_cierre = $this->input->post("fechaCierre");
+
+      $fechaInicio = date('Y-m-d',strtotime($str_fecha_inicio));
+      $fechaCierre = date('Y-m-d',strtotime($str_fecha_cierre));
 
 
       $data = array( "idGestion"=>$idgestion,

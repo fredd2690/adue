@@ -24,9 +24,10 @@
                            </div>
                            <div class="row">
                               <label for="fechaInicio" class="col-sm-3 control-label">fecha Inicio:</label>
-                              <div class="col-sm-5">
-                                <div data-pick-time="false" class="datetimepicker input-group date mb-lg">
-                                  <input type="text" id="fechaInicio"  name="fechaInicio" value="<?php echo $gestion->fechaInicio; ?>" class="form-control">
+                              <div class="col-sm-9">
+                                <div id="div_fechaInicio" data-pick-time="false" class="datetimepicker input-group date mb-lg">
+                                  <input type="text" id="fechaInicio"  name="fechaInicio" value="<?php echo date('m/d/Y',strtotime($gestion->fechaInicio) ); ?>" class="form-control"
+                                   >
                                   <span class="input-group-addon">
                                      <span class="fa fa-calendar"></span>
                                   </span>
@@ -35,9 +36,9 @@
                            </div>
                            <div class="row">
                               <label for="fechaCierre" class="col-sm-3 control-label">fecha clausura:</label>
-                              <div class="col-sm-5">
+                              <div class="col-sm-9">
                                 <div data-pick-time="false" class="datetimepicker input-group date mb-lg">
-                                  <input type="text" id="fechaCierre" name="fechaCierre" value="<?php echo $gestion->fechaCierre;?>" class="form-control">
+                                  <input type="text" id="fechaCierre" name="fechaCierre" value="<?php echo date('m/d/Y',strtotime($gestion->fechaCierre) );?>" class="form-control">
                                   <span class="input-group-addon">
                                      <span class="fa fa-calendar"></span>
                                   </span>
@@ -63,6 +64,14 @@
 </section>
 <!-- END Main section-->
 
-
+<script type="text/javascript">
+  
+document.addEventListener("DOMContentLoaded", function(event) {
+  
+    $('#fechaInicio').datetimepicker({format : 'MM/DD/YYYY'});
+    $('#fechaCierre').datetimepicker({format : 'DD-MM-YYYY'});
+     console.log('----')
+  });
+</script>
 </section>
 <!-- END Main wrapper-->

@@ -23,7 +23,7 @@
                            </div>
                            <div class="row">
                               <label for="fechaInicio" class="col-sm-3 control-label">fecha Inicio:</label>
-                              <div class="col-sm-5">
+                              <div class="col-sm-9">
                                 <div data-pick-time="false" class="datetimepicker input-group date mb-lg">
                                   <input type="text" id="fechaInicio" name="fechaInicio" placeholder="AAAA-MM-DD" class="form-control">
                                   <span class="input-group-addon">
@@ -34,7 +34,7 @@
                            </div>
                            <div class="row">
                               <label for="fechaCierre" class="col-sm-3 control-label">fecha clausura:</label>
-                              <div class="col-sm-5">
+                              <div class="col-sm-9">
                                 <div data-pick-time="false" class="datetimepicker input-group date mb-lg">
                                   <input type="text" id="fechaCierre" name="fechaCierre" placeholder="AAAA-MM-DD" class="form-control">
                                   <span class="input-group-addon">
